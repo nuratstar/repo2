@@ -22,11 +22,8 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: |
-        echo ${{ github.repository }}
-        echo ${{ github.event.pull_request.number }}
-        echo ${{ github.event.pull_request.base.ref }}
         export SEMGREP_REPO_NAME='testing_repo'
-        export SEMGREP_REPO_URL='https://github.com/nuratstar/repo2'
+        export SEMGREP_REPO_URL=${{ github.repository }}
         export SEMGREP_PR_ID=${{ github.event.pull_request.number }}
         export SEMGREP_BASELINE_REF=${{ github.event.pull_request.base.ref }}
         semgrep ci
