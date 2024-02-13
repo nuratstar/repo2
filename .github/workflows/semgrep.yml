@@ -22,7 +22,7 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - run: |
-        export SEMGREP_REPO_NAME='testing_repo'
+        export SEMGREP_REPO_NAME='repo2'
         export SEMGREP_REPO_URL=${{ github.repository }}
         export SEMGREP_PR_ID=${{ github.event.pull_request.number }}
         export SEMGREP_BASELINE_REF=${{ github.event.pull_request.base.ref }}
