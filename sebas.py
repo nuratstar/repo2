@@ -14,6 +14,10 @@ def env():
     # ok:debug-enabled
     app.run("0.0.0.0", debug=os.environ.get("DEBUG", False))
 
+def env2():
+    # ok:debug-enabled
+    app.run("0.0.0.0", debug=os.environ.get("DEBUG", False))
+    
 if __name__ == "__main__":
     # ruleid:debug-enabled
     app.run("0.0.0.0", debug=True)
